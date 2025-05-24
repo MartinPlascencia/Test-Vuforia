@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicName: gangnam
   animationName: Gangnam Style
-  notesConfig: {fileID: 0}
+  notesConfig: {fileID: 4900000, guid: bbde050429219ce4ea26ea6aa076df60, type: 3}
