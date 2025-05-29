@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicName: gangnam
   animationName: Twerk
-  notesConfig: {fileID: 0}
+  notesConfig: {fileID: 4900000, guid: 9b8be9923a284534b8c09a951a867a42, type: 3}
+  speed: 100
