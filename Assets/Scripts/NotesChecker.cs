@@ -27,22 +27,29 @@ public class NotesChecker : MonoBehaviour
     }
     public void DestroyNotes()
     {
-        if (notes.Count > 0)
+        onButtonPressed?.Invoke();
+        GameObject noteToDestroy = null;
+        int indexToRemove = -1;
+        for (int i = 0; i < notes.Count; i++)
+        {
+            if (notes[i] != null)
+            {
+                noteToDestroy = notes[i];
+                indexToRemove = i;
+                break;
+            }
+        }
+
+        if (noteToDestroy != null)
         {
             onCorrectNote?.Invoke();
+            notes.RemoveAt(indexToRemove);
+            Destroy(noteToDestroy);
         }
         else
         {
             onFailNote?.Invoke();
         }
-        onButtonPressed?.Invoke();
-        while (notes.Count > 0)
-        {
-            GameObject note = notes[0];
-            notes.RemoveAt(0);
-            Destroy(note);
-        }
-        notes.Clear();
     }
 
 }

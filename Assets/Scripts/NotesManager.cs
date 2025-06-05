@@ -86,15 +86,15 @@ public class NotesManager : MonoBehaviour
         }
     }
 
-    public void AddCorrectNote(int number)
+    public void AddCorrectNote()
     {
-        _correctNotesCount+= number;
+        _correctNotesCount++;
         AddNoteCount();
     }
 
-    public void AddNoteCount(int number = 1)
+    public void AddNoteCount()
     {
-        _notesCount+= number;
+        _notesCount++;
         if (_notesCount >= _currentNotesCount)
         {
             StartCoroutine(FinishSong());
